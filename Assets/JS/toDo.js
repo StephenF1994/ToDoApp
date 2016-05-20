@@ -15,11 +15,13 @@ $("input[type= 'text']").keypress(function(event){
 	if(event.which === 13){															//IF key pressed is enter
 		var newTask = $(this).val();												//get value of input
 		$(this).val("");															//Input box reset to blank
-		$('ul').append("<li><span>X </span>" + newTask + "</li>");					//Add new li element with value of input
+		$('ul').append("<li><span><i class = 'fa fa-trash'></i></span>" + newTask + "</li>");					//Add new li element with value of input
 	}
 })
 
 
-
+$('.fa-plus').click(function(){
+	$("input[type = 'text']").fadeToggle();
+})
 
 })
